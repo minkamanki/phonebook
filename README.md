@@ -8,7 +8,7 @@ This project includes a `docker-compose.yml` that sets up the database, backend,
 
 ### Prerequisites
 
-- Docker and Docker Compose must be installed on your machine.
+- Docker and Docker Compose must be installed.
 
 ### Running with Docker
 
@@ -27,8 +27,6 @@ This project includes a `docker-compose.yml` that sets up the database, backend,
    - **Backend API:** Available at [http://localhost:8080/api/contacts](http://localhost:8080/api/contacts).
    - **MySQL:** Runs on port 3306 (data is persisted in a Docker volume).
 
-
-
 ## Building Without Docker
 
 If you prefer to run the application components on your local machine:
@@ -40,13 +38,11 @@ If you prefer to run the application components on your local machine:
 - **MySQL:** Install and run MySQL on your local machine.
 - **Maven:** Install Maven for building the Spring Boot backend.
 
-
 ### Backend Setup
 
 1. **Configure MySQL:**
    - Create a database named `phonebookdb` in your MySQL server.
    - Where username=username and password=password
-     
 2. **Run the Backend:**
 
    Execute the jar file:
@@ -54,7 +50,6 @@ If you prefer to run the application components on your local machine:
    ```bash
    java -jar target/phonebook-backend-0.0.1-SNAPSHOT.jar
    ```
-
 
 ### Frontend Setup
 
@@ -73,5 +68,3 @@ If you prefer to run the application components on your local machine:
    ```bash
    npm run dev
    ```
-
-
