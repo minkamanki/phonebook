@@ -23,9 +23,9 @@ This project includes a `docker-compose.yml` which sets up the database, backend
    ```
 
 3. **Access the Application:**
-   - **Frontend:** Open [http://localhost:3000](http://localhost:3000) in your browser.
-   - **Backend API:** Available at [http://localhost:8080/api/contacts](http://localhost:8080/api/contacts).
-   - **MySQL:** Runs on port 3306 (data is persisted in a Docker volume).
+   - **Frontend:** [http://localhost:3000](http://localhost:3000)
+   - **Backend API:** [http://localhost:8080/api/contacts](http://localhost:8080/api/contacts)
+   - **MySQL:** Runs on port 3306
 
 ## AWS environment
 
