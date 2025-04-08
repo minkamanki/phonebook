@@ -4,7 +4,7 @@ This is a fullstack demo project that features a Spring Boot backend, a MySQL da
 
 ## Docker Setup and Running
 
-This project includes a `docker-compose.yml` that sets up the database, backend, and frontend.
+This project includes a `docker-compose.yml` which sets up the database, backend, and frontend.
 
 ### Prerequisites
 
@@ -27,6 +27,14 @@ This project includes a `docker-compose.yml` that sets up the database, backend,
    - **Backend API:** Available at [http://localhost:8080/api/contacts](http://localhost:8080/api/contacts).
    - **MySQL:** Runs on port 3306 (data is persisted in a Docker volume).
 
+## AWS environment
+
+Build the Docker images locally, tag and push them into AWS Elastic Container Registry (ECR).
+
+Once your images are in ECR, use AWS Elastic Container Service (ECS) to run your containers. Alternatively, you can use Amazon Elastic Kubernetes Service (EKS).
+
+Benefits to use AWS enviroment are scalability and availability. Additionally, it is easy to integrate with other AWS services like load balancers and logging.
+
 ## Building Without Docker
 
 If you prefer to run the application components on your local machine:
@@ -41,15 +49,22 @@ If you prefer to run the application components on your local machine:
 ### Backend Setup
 
 1. **Configure MySQL:**
+
    - Create a database named `phonebookdb` in your MySQL server.
-   - Where username=username and password=password
-2. **Run the Backend:**
+   - Update the backend configuration in `src/main/resources/application.properties` with your MySQL connection settings (forexample username and password that you used).
 
-   Execute the jar file:
+2. **Build the Backend:**
 
-   ```bash
-   java -jar target/phonebook-backend-0.0.1-SNAPSHOT.jar
-   ```
+   - In the backend folder, run the following command to build the application:
+
+     ```bash
+     mvn clean install
+     ```
+
+   - Execute the jar file:
+     ```bash
+     java -jar target/phonebook-backend-0.0.1-SNAPSHOT.jar
+     ```
 
 ### Frontend Setup
 
